@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(#f3c8cf, #f9e9ee);
+}
+
+/* HEADER */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  color: #7a4d56;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 3px solid rgba(218,140,150,0.4);
+}
+.card h2 {
+  color: #7a4d56;
+  margin-bottom: 10px;
+}
+.card p {
+  color: #444;
+  line-height: 1.5;
+}
+
+/* GOLD BUTTONS */
+.btn {
+  display: inline-block;
+  background: linear-gradient(to bottom, #f9df64, #c69b03);
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* BIG GOLD OFFER */
+.offer {
+  text-align: center;
+  padding: 20px;
+}
+.offer-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #f7d77a, #caa84b);
+  padding: 18px 25px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 14px;
+  color: #6f6f6f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+  .offer-btn {
+    font-size: 14px;
+  }
+}
