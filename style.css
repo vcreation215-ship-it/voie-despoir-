@@ -79,3 +79,42 @@ body {
 .footer { 
     font-size: 10px; margin-top: 40px; color: #b76e79; opacity: 0.6;
 }
+/* NAVBAR STYLÉE OR & ROSE GOLD */
+.navbar {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(15, 15, 15, 0.85);
+    border-bottom: 1px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(145deg, #bf953f, #fcf6ba, #b38728);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: #f2e1ac;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b76e79;
+}
