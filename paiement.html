@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
- <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paiement - Voie d'Espoir</title>
+  <title>Paiement – Voie d'Espoir</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">VOIE D'ESPOIR</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="formations.html">Formations</a></li>
-    <li><a href="paiement.html" class="active">Paiement</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <header class="hero">
+    <h1 class="logo-text">Paiement Sécurisé</h1>
+    <p class="tagline">Orange Money / MoMo</p>
+  </header>
 
-<header class="hero">
-  <h1>Choisissez votre mode de paiement</h1>
-  <p>Accédez facilement au programme complet.</p>
-</header>
+  <section class="card">
+    <div class="service-box">
+      <b>📱 Procédure de paiement</b>
+      <p>Envoyez le montant de votre formation via Orange Money ou Mobile Money.</p>
+      <p><b>Numéro :</b> <span style="color:#f2e1ac;">07 00 00 00 00</span></p>
+      <p><b>Nom du compte :</b> Voie d'Espoir</p>
+      <p><b>Montant :</b> dépend de la formation choisie.</p>
+    </div>
 
-<section class="payment-options">
-  <div class="method">
-    <img src="wave.png" alt="Wave">
-    <p><strong>Wave</strong></p>
-    <a href="#" class="btn">Payer avec Wave</a>
-  </div>
-  <div class="method">
-    <img src="orange-money.png" alt="Orange Money">
-    <p><strong>Orange Money</strong></p>
-    <a href="#" class="btn">Payer</a>
-  </div>
-  <div class="method">
-    <img src="mobile-money.png" alt="Mobile Money">
-    <p><strong>Mobile Money</strong></p>
-    <a href="#" class="btn">Payer</a>
-  </div>
-  <div class="method">
-    <img src="send-center.png" alt="Send Center">
-    <p><strong>Send Center</strong></p>
-    <a href="#" class="btn">Payer</a>
-  </div>
-</section>
+    <a href="#form" class="cta-button">J'ai payé</a>
+  </section>
 
-<footer>
-  © 2026 SODAPRES GROUP - Division Digitale
-</footer>
+  <section class="card" id="form">
+    <div class="service-box">
+      <b>📨 Confirmation de paiement</b>
+      <p>Remplissez ce formulaire pour recevoir votre accès :</p>
+    </div>
+
+    <form action="[formspree.io](https://formspree.io/f/yourID)" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom complet" required
+             style="padding:12px;width:100%;margin-bottom:15px;border-radius:8px;">
+      <input type="text" name="whatsapp" placeholder="Numéro WhatsApp" required
+             style="padding:12px;width:100%;margin-bottom:15px;border-radius:8px;">
+      <select name="formation" style="padding:12px;width:100%;margin-bottom:15px;border-radius:8px;">
+        <option value="Cinéma & IA">🎬 Cinéma & IA – 5.900 FCFA</option>
+        <option value="Marketing Digital">📱 Marketing Digital – 5.900 FCFA</option>
+        <option value="Accès Complet">🚀 Accès Complet – 10.000 FCFA</option>
+      </select>
+      <input type="file" name="preuve" style="margin-bottom:15px;">
+      <button type="submit" class="btn-access" style="width:100%;">Envoyer la preuve</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    © 2026 SODAPRES GROUP – Division Digitale
+  </footer>
 
 </body>
 </html>
+
