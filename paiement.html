@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement – Voie d'Espoir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1 class="logo-text">Paiement Sécurisé</h1>
+    <p class="tagline">Orange Money / Wave / MoMo</p>
+  </header>
+
+  <section class="card">
+    <div class="service-box">
+      <b>📱 Procédure de paiement</b>
+      <p>Envoyez le montant de votre formation via Orange Money, Wave ou Mobile Money.</p>
+
+      <p><b>Numéro de paiement :</b> <span style="color:#f2e1ac;">0701795947</span></p>
+      <p><b>Nom du compte :</b> Voie d'Espoir</p>
+      <p><b>Montant :</b> dépend de la formation choisie</p>
+    </div>
+
+    <a href="#form" class="cta-button">J'ai payé</a>
+  </section>
+
+  <section class="card" id="form">
+    <div class="service-box">
+      <b>📨 Confirmation de paiement</b>
+      <p>Remplissez ce formulaire pour recevoir votre accès automatiquement.</p>
+    </div>
+
+    <form action="[formspree.io](https://formspree.io/f/test)" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom complet"
+             required style="padding:12px;width:100%;margin-bottom:15px;border-radius:8px;">
+
+      <input type="text" name="whatsapp" placeholder="Numéro WhatsApp"
+             required style="padding:12px;width:100%;margin-bottom:15px;border-radius:8px;">
+
+      <select name="formation" style="padding:12px;width:100%;margin-bottom:15px;border-radius:8px;">
+        <option value="Cinéma & IA">🎬 Cinéma & IA – 5 900 FCFA</option>
+        <option value="Marketing Digital">📱 Marketing Digital – 5 900 FCFA</option>
+        <option value="Accès Complet">🚀 Accès Complet – 10 000 FCFA</option>
+      </select>
+
+      <input type="file" name="preuve"
+             style="margin-bottom:15px;">
+
+      <button type="submit" class="btn-access" style="width:100%;">Envoyer la preuve</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    © 2026 SODAPRES GROUP – Division Digitale
+  </footer>
+
+</body>
+</html>
