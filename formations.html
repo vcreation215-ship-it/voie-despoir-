@@ -6,6 +6,18 @@
   <title>Formations – Voie d'Espoir</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  // mot de passe personnalisé
+  const motDePasse = "voiedespoir2026";
+
+  // demander le code en entrant sur la page
+  const saisie = prompt("Veuillez entrer votre code d'accès à la formation : ");
+  
+  if (saisie !== motDePasse) {
+    alert("⛔ Code incorrect. Vous n'avez pas accès à cette formation.");
+    window.location.href = "paiement.html"; // renvoie vers la page de paiement
+  }
+</script>
 
 <body>
 <nav class="navbar">
