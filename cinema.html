@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation Cinéma & IA – Voie d'Espoir</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formation Cinéma & IA</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="nav-logo">VOIE D'ESPOIR</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="formations.html">Formations</a></li>
-        <li><a href="paiement.html">Paiement</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <div class="nav-logo">VOIE D'ESPOIR</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="paiement.html">Paiement</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-<header class="hero">
-    <h1 class="logo-text">Formation Cinéma & Intelligence Artificielle</h1>
-    <p class="tagline">Crée des films modernes, animés, et scénarisés grâce à l'IA</p>
-</header>
-
 <section class="card">
-    <div class="service-box">
-        <b>🎬 Objectifs de la formation</b>
-        <p>
-            • Apprendre à utiliser l’IA pour créer des scènes cinématographiques.<br>
-            • Générer des plans, décors, personnages et effets visuels.<br>
-            • Monter une vidéo professionnelle étape par étape.
-        </p>
-    </div>
+  <div class="service-box">
+    <b>🔐 Accès Cinéma & IA</b>
+    <p>Entrez votre code unique.</p>
+
+    <input id="code" type="password" placeholder="Votre code"
+      style="padding:10px;width:100%;margin-top:15px;border-radius:8px;">
+    <button onclick="verifier()" class="btn-access" style="width:100%;margin-top:15px;">
+      Valider
+    </button>
+
+    <p id="erreur" style="color:#b76e79;margin-top:10px;"></p>
+  </div>
 </section>
 
-<section class="card">
-    <div class="service-box">
-        <b>📚 Contenu du programme</b>
-        <p>
-            • Bases de 
+<section class="card" id="contenu" style="display:none;">
+  <div class="service-box">
+    <b>🎬 Contenu de la Formation Cinéma & IA</b>
+    <p>Bienvenue ! Votre accès est validé.</p>
+  </div>
+</section>
+
+<script>
+async function verifier() {
+  const codeEntre = document.getElementById("code").value;
+
+  const res = await fetch("codes.json");
+  const data = await res.json();
+
+  const codeObj = data.codes.find(c => c.code === codeEntre && c.type === "cinema" && !c.used);
+
+  if (!codeObj) {
+    document.getElementById("erreur").innerText = "Code invalide ou déjà utilisé.";
+    return;
+  }
+
+  document.getElementById("contenu").style.display = "block";
+  document.getElementById("erreur").innerText = "";
+}
+</script>
+
+</body>
+</html>
+
 
