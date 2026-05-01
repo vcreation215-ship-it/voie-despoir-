@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accès Complet VIP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo">VOIE D'ESPOIR</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="paiement.html">Paiement</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="card">
+  <div class="service-box">
+    <b>🔐 Accès VIP</b>
+    <p>Entrez votre code unique.</p>
+
+    <input id="code" type="password" placeholder="Votre code"
+      style="padding:10px;width:100%;margin-top:15px;border-radius:8px;">
+
+    <button onclick="verifier()" class="btn-access" style="width:100%;margin-top:15px;">
+      Valider
+    </button>
+
+    <p id="erreur" style="color:#b76e79;margin-top:10px;"></p>
+  </div>
+</section>
+
+<section class="card" id="contenu" style="display:none;">
+  <div class="service-box">
+    <b>🚀 Accès VIP Complet</b>
+    <p>Bienvenue ! Votre accès est validé.</p>
+  </div>
+</section>
+
+<script>
+async function verifier() {
+  const codeEntre = document.getElementById("code").value;
+
+  const res = await fetch("codes.json");
+  const data = await res.json();
+
+  const codeObj = data.codes.find(c => c.code === codeEntre && c.type === "vip" && !c.used);
+
+  if (!codeObj) {
+    document.getElementById("erreur").innerText = "Code invalide ou déjà utilisé.";
+    return;
+  }
+
+  document.getElementById("contenu").style.display = "block";
+  document.getElementById("erreur").innerText = "";
+}
+</script>
+
+</body>
+</html>
