@@ -1,0 +1,86 @@
+<select id="formation">
+  <option value="cinema">Cinéma & IA</option>
+  <option value="marketing">Marketing Digital</option>
+  <option value="vip">Pack Complet</option>
+</select>
+
+<button onclick="genererMessage()">Générer le code</button>
+
+<textarea id="message" rows="12" style="width:100%;"></textarea>
+
+<script>
+  function genererCode(prefixe) {
+    const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let code = "";
+
+    for (let i = 0; i < 6; i++) {
+      code += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+
+    return prefixe + "-" + code;
+  }
+
+  function genererMessage() {
+    const formation = document.getElementById("formation").value;
+
+    let code = "";
+    let message = "";
+    const lien = "[comforting-jelly-c52490.netlify.app](https://comforting-jelly-c52490.netlify.app)";
+
+    if (formation === "cinema") {
+      code = genererCode("CINEMA");
+
+      message = `Bonjour 👋
+
+Votre accès à la formation 🎬 Cinéma & IA est validé.
+
+Lien d’accès :
+${lien}
+
+Code d’accès :
+${code}
+
+Important : gardez ce code confidentiel.
+
+Bienvenue dans VOIE D’ESPOIR 🚀`;
+    }
+
+    if (formation === "marketing") {
+      code = genererCode("MARKETING");
+
+      message = `Bonjour 👋
+
+Votre accès à la formation 📱 Marketing Digital est validé.
+
+Lien d’accès :
+${lien}
+
+Code d’accès :
+${code}
+
+Important : gardez ce code confidentiel.
+
+Bienvenue dans VOIE D’ESPOIR 🚀`;
+    }
+
+    if (formation === "vip") {
+      code = genererCode("VIP");
+
+      message = `Bonjour 👋
+
+Votre accès complet 🚀 VOIE D’ESPOIR est validé.
+
+Lien d’accès :
+${lien}
+
+Code d’accès VIP :
+${code}
+
+Important : gardez ce code confidentiel.
+
+Bienvenue dans VOIE D’ESPOIR 🚀`;
+    }
+
+    document.getElementById("message").value = message;
+  }
+</script>
