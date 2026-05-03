@@ -31,28 +31,49 @@
   </ul>
 </nav>
 
-<section class="card">
-  <div class="service-box">
-    <b>🔐 Accès VIP</b>
-    <p>Entrez votre code unique.</p>
-
-    <input id="code" type="password" placeholder="Votre code"
-      style="padding:10px;width:100%;margin-top:15px;border-radius:8px;">
-
-    <button onclick="verifier()" class="btn-access" style="width:100%;margin-top:15px;">
-      Valider
-    </button>
-
-    <p id="erreur" style="color:#b76e79;margin-top:10px;"></p>
-  </div>
-</section>
-
 <section class="card" id="contenu" style="display:none;">
   <div class="service-box">
-    <b>🚀 Accès VIP Complet</b>
-    <p>Bienvenue ! Votre accès est validé.</p>
+    <b>🚀 Accès Complet VIP</b>
+    <p>Bienvenue dans votre espace premium. Vous avez accès à toutes les formations disponibles sur VOIE D’ESPOIR.</p>
+  </div>
+
+  <div class="service-box">
+    <b>🎬 Cinéma & Intelligence Artificielle</b>
+    <p>Accédez à tous les modules de la formation Cinéma & IA.</p>
+    <a href="#cinema-vip" class="btn-access">Accéder</a>
+  </div>
+
+  <div class="service-box">
+    <b>📱 Marketing & Business Digital</b>
+    <p>Accédez à tous les modules de la formation Marketing Digital.</p>
+    <a href="#marketing-vip" class="btn-access">Accéder</a>
+  </div>
+
+  <div class="service-box" id="cinema-vip">
+    <b>🎬 Modules Cinéma & IA</b>
+    <p>Module 1 — Introduction au cinéma avec IA</p>
+    <p>Module 2 — Écrire un scénario avec l’IA</p>
+    <p>Module 3 — Générer des images et personnages</p>
+    <p>Module 4 — Créer des vidéos avec l’IA</p>
+    <p>Module 5 — Montage, son et export final</p>
+  </div>
+
+  <div class="service-box" id="marketing-vip">
+    <b>📱 Modules Marketing Digital</b>
+    <p>Module 1 — Les bases du marketing digital</p>
+    <p>Module 2 — Trouver son client idéal</p>
+    <p>Module 3 — Vendre avec WhatsApp, Facebook et TikTok</p>
+    <p>Module 4 — Créer une offre irrésistible</p>
+    <p>Module 5 — Automatiser son business</p>
+  </div>
+
+  <div class="service-box">
+    <b>🎁 Bonus VIP</b>
+    <p>Accès aux scripts, prompts, modèles de vente et ressources supplémentaires.</p>
+    <a href="#" class="btn-access">Télécharger les bonus</a>
   </div>
 </section>
+
 
 <script>
 async function verifier() {
