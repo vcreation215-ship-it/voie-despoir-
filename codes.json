@@ -1,4 +1,15 @@
-{
-  "codes": []
+if (window.location.pathname.includes("admin.html")) {
+  // Ne pas demander de code sur la page admin
+} else {
+
+  const code = prompt("Veuillez entrer votre code d'accès à la formation :");
+
+  if (code === "1234") {
+    window.location.href = "formations.html";
+  } else {
+    alert("Code incorrect");
+  }
+
 }
+
 
