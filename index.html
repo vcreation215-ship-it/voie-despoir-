@@ -18,40 +18,102 @@
   </ul>
 </nav>
 
-  <!-- HEADER -->
-  <header class="hero">
-    <h1 class="logo-text">VOIE D'ESPOIR</h1>
-    <p class="tagline">L'Élite de la Création Digitale</p>
-  </header>
+<header class="hero">
+  <h1 class="logo-text">VOIE D'ESPOIR</h1>
+  <p class="tagline">L'Élite de la Création Digitale</p>
+</header>
 
-  <!-- FORMATION 1 -->
-  <section class="card">
-    <div class="service-box">
-      <b>🎬 Cinéma & Intelligence Artificielle</b>
-      <p>Maîtrisez les outils d'IA pour créer des films et animations professionnels.</p>
-    </div>
-    <a href="#" class="btn-access">ACCÉDER (5,900 FCFA)</a>
-  </section>
+<section class="card">
+  <h2>Entrer votre code d’accès</h2>
 
-  <!-- FORMATION 2 -->
-  <section class="card">
-    <div class="service-box">
-      <b>📱 Marketing & Business Digital</b>
-      <p>Apprenez à vendre et à propulser votre image de marque en ligne.</p>
-    </div>
-    <a href="#" class="btn-access">ACCÉDER (5,900 FCFA)</a>
-  </section>
+  <input 
+    type="text" 
+    id="accessCode" 
+    placeholder="Exemple : CINEMA-5LBHMZ"
+    style="width:100%; padding:14px; font-size:16px; margin:10px 0; box-sizing:border-box;"
+  />
 
-  <!-- OFFRE COMPLETE -->
-  <section class="card">
-    <a href="#" class="cta-button">🚀 Accès Complet (10,000 FCFA)</a>
-  </section>
+  <button 
+    onclick="verifierCode()"
+    style="width:100%; padding:14px; font-size:16px; font-weight:bold; cursor:pointer;"
+  >
+    Valider mon accès
+  </button>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    © 2026 SODAPRES GROUP – Division Digitale
-  </footer>
+  <p id="messageAcces" style="font-weight:bold; margin-top:15px;"></p>
+</section>
+
+<section class="card">
+  <div class="service-box">
+    <b>🎬 Cinéma & Intelligence Artificielle</b>
+    <p>Maîtrisez les outils d'IA pour créer des films et animations professionnels.</p>
+  </div>
+  <a href="#" class="btn-access">ACCÉDER (5,900 FCFA)</a>
+</section>
+
+<section class="card">
+  <div class="service-box">
+    <b>📱 Marketing & Business Digital</b>
+    <p>Apprenez à vendre et à propulser votre image de marque en ligne.</p>
+  </div>
+  <a href="#" class="btn-access">ACCÉDER (5,900 FCFA)</a>
+</section>
+
+<section class="card">
+  <a href="#" class="cta-button">🚀 Accès Complet (10,000 FCFA)</a>
+</section>
+
+<footer class="footer">
+  © 2026 SODAPRES GROUP – Division Digitale
+</footer>
+
+<script>
+  const codesValides = {
+    "CINEMA-5LBHMZ": "cinema",
+    "CINEMA-CSMLLA": "cinema",
+    "MARKETING-D5V5DD": "marketing",
+    "VIP-123ABC": "vip"
+  };
+
+  function verifierCode() {
+    const code = document.getElementById("accessCode").value.trim().toUpperCase();
+    const message = document.getElementById("messageAcces");
+
+    if (codesValides[code] === "cinema") {
+      message.style.color = "green";
+      message.textContent = "Accès validé : Formation Cinéma & IA ✅";
+      
+      setTimeout(() => {
+        window.location.href = "cinema.html";
+      }, 1000);
+    }
+
+    else if (codesValides[code] === "marketing") {
+      message.style.color = "green";
+      message.textContent = "Accès validé : Formation Marketing Digital ✅";
+      
+      setTimeout(() => {
+        window.location.href = "marketing.html";
+      }, 1000);
+    }
+
+    else if (codesValides[code] === "vip") {
+      message.style.color = "green";
+      message.textContent = "Accès complet validé ✅";
+      
+      setTimeout(() => {
+        window.location.href = "formations.html";
+      }, 1000);
+    }
+
+    else {
+      message.style.color = "red";
+      message.textContent = "Code invalide. Vérifiez le code reçu sur WhatsApp.";
+    }
+  }
+</script>
 
 </body>
 </html>
+
 
